@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from random import randint
+from typing import List, Any
+
 from structs import Queue, Stack
 
 
@@ -11,15 +13,19 @@ def reverse_data(data: list = None):
     # et les retourner en ordre inverse, sans utiliser de liste.
 
     if data is None:
-        pass  # Demander les valeurs ici
-
-    reversed_data = None  # Stocker le résultat ici
+        fifo = Stack()
+        for number in range(0, 10):
+            fifo.put(int(input("Donnez un nombre: ")))
+        reversed_data = [fifo.get() for number in range(0, 10)]
+      # Stocker le résultat ici
 
     return reversed_data
 
 
 def delete_nth_from_stack(data: Stack, position: int) -> Stack:
     # TODO: Supprimer le énième (position) élément de data et retourner la nouvelle structure de données.
+    for element in data:
+
     return Stack()
 
 
