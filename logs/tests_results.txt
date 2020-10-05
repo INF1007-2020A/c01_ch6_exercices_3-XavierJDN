@@ -1,0 +1,61 @@
+test_delete_queue (__main__.TestExercice) ... FAIL
+test_delete_stack (__main__.TestExercice) ... FAIL
+test_reverse (__main__.TestExercice) ... ERROR
+test_sort_queue (__main__.TestExercice) ... FAIL
+test_sort_stack (__main__.TestExercice) ... FAIL
+test_string_and_structs (__main__.TestExercice) ... ERROR
+
+======================================================================
+ERROR: test_reverse (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 17, in test_reverse
+    output = exercice.reverse_data(values)
+  File "/home/runner/work/c01_ch6_exercices_3-XavierJDN/c01_ch6_exercices_3-XavierJDN/exercice.py", line 22, in reverse_data
+    return reversed_data
+UnboundLocalError: local variable 'reversed_data' referenced before assignment
+
+======================================================================
+ERROR: test_string_and_structs (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 91, in test_string_and_structs
+    fifo.put_many("Yeet")
+TypeError: put_many() missing 1 required positional argument: 'items'
+
+======================================================================
+FAIL: test_delete_queue (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 53, in test_delete_queue
+    'Mauvaise reponse'
+AssertionError: [] != [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] : Mauvaise reponse
+
+======================================================================
+FAIL: test_delete_stack (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 38, in test_delete_stack
+    'Mauvaise reponse'
+AssertionError: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19] != [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] : Mauvaise reponse
+
+======================================================================
+FAIL: test_sort_queue (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 83, in test_sort_queue
+    'Mauvaise reponse'
+AssertionError: [] != [4, 80, 157, 220, 238, 243, 258, 268, 559,[50 chars] 946] : Mauvaise reponse
+
+======================================================================
+FAIL: test_sort_stack (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 68, in test_sort_stack
+    'Mauvaise reponse'
+AssertionError: [] != [40, 120, 193, 198, 269, 300, 310, 320, 33[52 chars] 999] : Mauvaise reponse
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.002s
+
+FAILED (failures=4, errors=2)
