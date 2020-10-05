@@ -17,16 +17,20 @@ def reverse_data(data: list = None):
         for number in range(0, 10):
             fifo.put(int(input("Donnez un nombre: ")))
         reversed_data = [fifo.get() for number in range(0, 10)]
-      # Stocker le résultat ici
+    # Stocker le résultat ici
 
     return reversed_data
 
 
-def delete_nth_from_stack(data: Stack, position: int) -> Stack:
+def delete_nth_from_stack(data: Stack, position: int) -> list:
     # TODO: Supprimer le énième (position) élément de data et retourner la nouvelle structure de données.
-    for element in data:
-
-    return Stack()
+    result = Stack()
+    for _ in range(len(data) - position):
+        result.put(data.get())
+    data.get()
+    for _ in range(len(result)):
+        data.put(result.get())
+    return data
 
 
 def delete_nth_from_queue(data: Queue, position: int) -> Queue:
